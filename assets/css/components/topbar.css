@@ -1,61 +1,122 @@
+/* =========================
+   TOPBAR
+========================= */
+
 .topbar {
     background: var(--primary);
+
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
     padding: 12px 0;
+
+    overflow: hidden;
 }
+
+
+/* =========================
+   INNER
+========================= */
 
 .topbar-inner {
     display: flex;
+
     align-items: center;
     justify-content: space-between;
+
     gap: 24px;
 }
+
+
+/* =========================
+   LEFT / RIGHT
+========================= */
 
 .topbar-left,
 .topbar-right {
     display: flex;
+
     align-items: center;
 }
 
 .topbar-left {
     gap: 22px;
+
+    flex-wrap: wrap;
 }
 
 .topbar-right {
     justify-content: flex-end;
+
+    flex-shrink: 0;
 }
+
+
+/* =========================
+   ITEMS
+========================= */
 
 .topbar-item {
     display: flex;
+
     align-items: center;
+
     gap: 10px;
 }
 
 .topbar-text {
     display: flex;
+
     flex-direction: column;
 }
+
+
+/* =========================
+   DOT
+========================= */
 
 .topbar-dot {
     width: 8px;
     height: 8px;
+
     border-radius: 50%;
+
     background: var(--accent);
-    margin-top: 2px;
+
     flex-shrink: 0;
 }
 
+
+/* =========================
+   TEXT
+========================= */
+
 .topbar-label {
     color: rgba(255, 255, 255, 0.55);
+
+    font-size: 12px;
+    font-weight: 600;
+
+    text-transform: uppercase;
+
+    letter-spacing: .5px;
 }
 
-.topbar-item span,
+.topbar-main-text,
 .topbar-link {
     font-size: 13px;
     font-weight: 500;
-    letter-spacing: .2px;
-    color: rgba(255, 255, 255, 0.92);
+
     line-height: 1.5;
+
+    letter-spacing: .2px;
+
+    color: rgba(255, 255, 255, 0.92);
+}
+
+.topbar-link {
+    transition: .3s ease;
+
+    white-space: nowrap;
 }
 
 .topbar-link:hover {
@@ -69,19 +130,62 @@
 
 @media (max-width: 992px) {
 
+    .topbar {
+        padding: 10px 0;
+    }
+
     .topbar-inner {
         flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
+
+        align-items: center;
+        justify-content: center;
+
+        gap: 8px;
     }
 
     .topbar-left {
-        flex-wrap: wrap;
-        gap: 14px;
+        width: 100%;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 6px;
     }
 
-    .topbar-right {
+    .topbar-item {
         width: 100%;
+
+        justify-content: center;
+        align-items: center;
+
+        gap: 8px;
+
+        text-align: center;
+    }
+
+    .topbar-text {
+        align-items: center;
+    }
+
+    .topbar-dot {
+        width: 6px;
+        height: 6px;
+    }
+
+    .topbar-label {
+        font-size: 11px;
+    }
+
+    .topbar-main-text {
+        font-size: 12px;
+
+        line-height: 1.45;
+    }
+
+    /* HIDE EMAIL ON TABLET & MOBILE */
+    .topbar-right {
+        display: none;
     }
 
 }
@@ -94,48 +198,29 @@
 @media (max-width: 576px) {
 
     .topbar {
-        padding: 12px 0;
+        padding: 8px 0;
     }
 
     .topbar-inner {
-        align-items: flex-start;
-        gap: 12px;
+        gap: 6px;
     }
 
     .topbar-left {
-        width: 100%;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
+        gap: 5px;
     }
 
     .topbar-item {
-        width: 100%;
-        align-items: flex-start;
-        gap: 10px;
+        gap: 7px;
     }
 
-    .topbar-dot {
-        width: 7px;
-        height: 7px;
-        margin-top: 7px;
+    .topbar-label {
+        font-size: 10px;
     }
 
-    .topbar-item span,
-    .topbar-link {
-        font-size: 12px;
-        line-height: 1.6;
-    }
+    .topbar-main-text {
+        font-size: 11px;
 
-    .topbar-right {
-        width: 100%;
-        padding-top: 10px;
-        border-top: 1px solid rgba(255, 255, 255, 0.08);
-    }
-
-    .topbar-link {
-        display: block;
-        width: 100%;
+        line-height: 1.4;
     }
 
 }
