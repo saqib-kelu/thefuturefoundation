@@ -1,0 +1,29 @@
+:root {
+
+    /* COLORS */
+    --primary: #123282;
+    --accent: #fddd00;
+    --secondary: #596215;
+
+    --bg: #fafaf7;
+    --white: #ffffff;
+
+    --text: #1a1a1a;
+    --muted: #6b7280;
+    --border: #e5e7eb;
+
+    /* TYPOGRAPHY */
+    --font-heading: 'Josefin Sans', sans-serif;
+    --font-body: 'Open Sauce One', sans-serif;
+
+    /* LAYOUT */
+    --container-width: 1240px;
+
+    /* RADIUS */
+    --radius-sm: 6px;
+    --radius-md: 12px;
+
+    /* TRANSITION */
+    --transition: all .3s ease;
+
+}

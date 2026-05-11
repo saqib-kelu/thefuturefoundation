@@ -1,0 +1,448 @@
+/* =========================
+   MAIN NAVBAR
+========================= */
+
+.main-navbar {
+    background: var(--white);
+
+    border-bottom: 1px solid var(--border);
+
+    min-height: 110px;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 999;
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.main-navbar .container {
+    display: flex;
+    align-items: center;
+
+    gap: 40px;
+}
+
+
+/* =========================
+   BRAND
+========================= */
+
+.navbar-brand {
+    margin: 0;
+    padding: 0;
+
+    flex-shrink: 0;
+}
+
+.navbar-brand img {
+    height: 82px;
+    width: auto;
+
+    object-fit: contain;
+}
+
+
+/* =========================
+   COLLAPSE
+========================= */
+
+.navbar-collapse {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    flex: 1;
+
+    margin-left: 60px;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.navbar-nav {
+    align-items: center;
+
+    gap: 28px;
+
+    margin: 0 auto;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    position: relative;
+
+    padding: 0 !important;
+
+    font-family: var(--font-heading);
+
+    font-size: 16px;
+    font-weight: 600;
+
+    letter-spacing: .2px;
+
+    color: var(--text);
+
+    transition: var(--transition);
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--primary);
+}
+
+
+/* =========================
+   UNDERLINE EFFECT
+========================= */
+
+.nav-link::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -10px;
+
+    width: 0%;
+    height: 2px;
+
+    background: var(--accent);
+
+    transition: var(--transition);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+
+/* =========================
+   NAVBAR ACTIONS
+========================= */
+
+.navbar-actions {
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================
+   JOIN BUTTON
+========================= */
+
+.navbar-join-btn {
+    height: 48px;
+
+    padding: 0 24px;
+
+    background: var(--primary);
+
+    border: 1px solid var(--primary);
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--white);
+
+    font-size: 14px;
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    transition: .3s ease;
+}
+
+.navbar-join-btn:hover {
+    background: #0d2563;
+
+    border-color: #0d2563;
+
+    color: var(--white);
+}
+
+
+/* =========================
+   DONATE BUTTON
+========================= */
+
+.navbar-donate-btn {
+    height: 48px;
+
+    padding: 0 28px;
+
+    background: var(--accent);
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #1f2937;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    white-space: nowrap;
+
+    transition: .3s ease;
+}
+
+.navbar-donate-btn:hover {
+    background: #e8cc00;
+
+    color: #1f2937;
+}
+
+
+/* =========================
+   CUSTOM TOGGLER
+========================= */
+
+.custom-toggler {
+    width: 52px;
+    height: 52px;
+
+    padding: 0;
+
+    border: none;
+
+    background: rgba(18, 50, 130, .05);
+
+    border-radius: 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    box-shadow: none !important;
+
+    transition: .3s ease;
+}
+
+.custom-toggler:hover {
+    background: rgba(18, 50, 130, .1);
+}
+
+
+/* =========================
+   TOGGLER LINES
+========================= */
+
+.toggler-line {
+    position: absolute;
+
+    width: 22px;
+    height: 2px;
+
+    background: var(--primary);
+
+    border-radius: 100px;
+
+    transition: .35s ease;
+}
+
+
+/* TOP */
+.top-line {
+    transform: translateY(-7px);
+}
+
+/* MIDDLE */
+.middle-line {
+    opacity: 1;
+}
+
+/* BOTTOM */
+.bottom-line {
+    transform: translateY(7px);
+}
+
+
+/* =========================
+   ACTIVE STATE
+========================= */
+
+.custom-toggler[aria-expanded="true"] .top-line {
+    transform: rotate(45deg);
+}
+
+.custom-toggler[aria-expanded="true"] .middle-line {
+    opacity: 0;
+}
+
+.custom-toggler[aria-expanded="true"] .bottom-line {
+    transform: rotate(-45deg);
+}
+
+
+/* =========================
+   LARGE DESKTOP
+========================= */
+
+@media (max-width: 1200px) {
+
+    .navbar-collapse {
+        margin-left: 30px;
+    }
+
+    .navbar-nav {
+        gap: 20px;
+    }
+
+    .nav-link {
+        font-size: 15px;
+    }
+
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 992px) {
+
+    .main-navbar {
+        min-height: 92px;
+    }
+
+    .main-navbar .container {
+        gap: 20px;
+    }
+
+    .navbar-brand img {
+        height: 66px;
+    }
+
+    .navbar-collapse {
+        width: 100%;
+
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        margin-left: 0;
+
+        margin-top: 24px;
+        padding-top: 24px;
+
+        border-top: 1px solid var(--border);
+    }
+
+    .navbar-nav {
+        width: 100%;
+
+        align-items: flex-start;
+
+        gap: 22px;
+
+        margin: 0;
+    }
+
+    .nav-link {
+        font-size: 16px;
+    }
+
+    .nav-link::after {
+        display: none;
+    }
+
+    .navbar-actions {
+        width: 100%;
+
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 12px;
+
+        margin-top: 28px;
+    }
+
+    .navbar-join-btn,
+    .navbar-donate-btn {
+        width: 100%;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 576px) {
+
+    .main-navbar {
+        min-height: 82px;
+    }
+
+    .navbar-brand img {
+        height: 54px;
+    }
+
+    .navbar-collapse {
+        margin-top: 20px;
+        padding-top: 20px;
+    }
+
+    .navbar-nav {
+        gap: 18px;
+    }
+
+    .nav-link {
+        font-size: 15px;
+    }
+
+    .navbar-actions {
+        margin-top: 24px;
+    }
+
+    .navbar-join-btn,
+    .navbar-donate-btn {
+        height: 46px;
+
+        font-size: 13px;
+    }
+
+    .custom-toggler {
+        width: 46px;
+        height: 46px;
+
+        border-radius: 12px;
+    }
+
+    .toggler-line {
+        width: 20px;
+    }
+
+}
+
+
+/* =========================
+   DESKTOP TOGGLER HIDE
+========================= */
+
+@media (min-width: 993px) {
+
+    .custom-toggler {
+        display: none;
+    }
+
+}

@@ -1,0 +1,267 @@
+/* =========================
+   VOLUNTEER CTA
+========================= */
+
+.volunteer-cta-section {
+    padding: 10px 0 120px;
+}
+
+
+/* =========================
+   WRAPPER
+========================= */
+
+.volunteer-cta-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 520px;
+
+    gap: 70px;
+
+    background: #f3f3f1;
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   LEFT PANEL
+========================= */
+
+.volunteer-left-panel {
+    padding: 70px;
+}
+
+.volunteer-eyebrow {
+    display: inline-block;
+
+    margin-bottom: 18px;
+
+    color: var(--secondary);
+
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+
+    text-transform: uppercase;
+}
+
+.volunteer-title {
+    max-width: 760px;
+
+    font-family: var(--font-heading);
+
+    font-size: 3.3rem;
+    line-height: 1.08;
+    font-weight: 700;
+
+    color: var(--text);
+
+    margin-bottom: 28px;
+}
+
+.volunteer-text {
+    max-width: 620px;
+
+    color: var(--muted);
+
+    font-size: 17px;
+    line-height: 1.9;
+
+    margin-bottom: 40px;
+}
+
+
+/* =========================
+   ACTIONS
+========================= */
+
+.volunteer-actions {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.dark-outline {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.dark-outline:hover {
+    background: var(--primary);
+    color: var(--white);
+}
+
+
+/* =========================
+   RIGHT PANEL
+========================= */
+
+.volunteer-right-panel {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    min-height: 100%;
+}
+
+
+/* =========================
+   BOX
+========================= */
+
+.volunteer-info-box {
+    position: relative;
+
+    padding: 40px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    min-height: 240px;
+}
+
+.volunteer-box-number {
+    position: absolute;
+
+    top: 24px;
+    right: 24px;
+
+    font-family: var(--font-heading);
+
+    font-size: 3.5rem;
+    font-weight: 700;
+
+    opacity: .12;
+}
+
+
+/* =========================
+   COLORS
+========================= */
+
+.yellow-box {
+    background: var(--accent);
+}
+
+.yellow-box h3,
+.yellow-box p,
+.yellow-box .volunteer-box-number {
+    color: #1f2937;
+}
+
+.navy-box {
+    background: var(--primary);
+}
+
+.navy-box h3,
+.navy-box p,
+.navy-box .volunteer-box-number {
+    color: var(--white);
+}
+
+.olive-box {
+    background: var(--secondary);
+}
+
+.olive-box h3,
+.olive-box p,
+.olive-box .volunteer-box-number {
+    color: var(--white);
+}
+
+
+/* =========================
+   TYPOGRAPHY
+========================= */
+
+.volunteer-info-box h3 {
+    font-family: var(--font-heading);
+
+    font-size: 1.7rem;
+    line-height: 1.2;
+    font-weight: 700;
+
+    margin-bottom: 16px;
+}
+
+.volunteer-info-box p {
+    font-size: 15px;
+    line-height: 1.8;
+
+    margin: 0;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 992px) {
+
+    .volunteer-cta-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .volunteer-title {
+        font-size: 2.7rem;
+    }
+
+    .volunteer-right-panel {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 576px) {
+
+    .volunteer-cta-section {
+        padding: 0 0 80px;
+    }
+
+    .volunteer-left-panel {
+        padding: 34px 24px;
+    }
+
+    .volunteer-title {
+        font-size: 2rem;
+        line-height: 1.12;
+
+        margin-bottom: 22px;
+    }
+
+    .volunteer-text {
+        font-size: 15px;
+        line-height: 1.8;
+
+        margin-bottom: 28px;
+    }
+
+    .volunteer-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .volunteer-right-panel {
+        grid-template-columns: 1fr;
+    }
+
+    .volunteer-info-box {
+        min-height: 220px;
+
+        padding: 28px 22px;
+    }
+
+    .volunteer-box-number {
+        font-size: 3rem;
+    }
+
+    .volunteer-info-box h3 {
+        font-size: 1.4rem;
+    }
+
+}

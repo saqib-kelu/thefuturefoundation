@@ -1,0 +1,141 @@
+.topbar {
+    background: var(--primary);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 12px 0;
+}
+
+.topbar-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.topbar-left,
+.topbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.topbar-left {
+    gap: 22px;
+}
+
+.topbar-right {
+    justify-content: flex-end;
+}
+
+.topbar-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.topbar-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.topbar-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.topbar-label {
+    color: rgba(255, 255, 255, 0.55);
+}
+
+.topbar-item span,
+.topbar-link {
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: .2px;
+    color: rgba(255, 255, 255, 0.92);
+    line-height: 1.5;
+}
+
+.topbar-link:hover {
+    color: var(--accent);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 992px) {
+
+    .topbar-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .topbar-left {
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+
+    .topbar-right {
+        width: 100%;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 576px) {
+
+    .topbar {
+        padding: 12px 0;
+    }
+
+    .topbar-inner {
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .topbar-left {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .topbar-item {
+        width: 100%;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .topbar-dot {
+        width: 7px;
+        height: 7px;
+        margin-top: 7px;
+    }
+
+    .topbar-item span,
+    .topbar-link {
+        font-size: 12px;
+        line-height: 1.6;
+    }
+
+    .topbar-right {
+        width: 100%;
+        padding-top: 10px;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .topbar-link {
+        display: block;
+        width: 100%;
+    }
+
+}

@@ -1,0 +1,186 @@
+/* =========================
+   COLLABORATIONS
+========================= */
+
+.collaborations-section {
+    padding: 10px 0 120px;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.collaborations-header {
+    max-width: 820px;
+
+    margin-bottom: 60px;
+}
+
+.collaborations-eyebrow {
+    display: inline-block;
+
+    margin-bottom: 18px;
+
+    color: var(--secondary);
+
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+
+    text-transform: uppercase;
+}
+
+.collaborations-title {
+    font-family: var(--font-heading);
+
+    font-size: 3.2rem;
+    line-height: 1.08;
+    font-weight: 700;
+
+    color: var(--text);
+
+    margin-bottom: 24px;
+}
+
+.collaborations-text {
+    color: var(--muted);
+
+    font-size: 17px;
+    line-height: 1.9;
+
+    margin: 0;
+}
+
+
+/* =========================
+   GRID
+========================= */
+
+.collaborations-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+
+    gap: 18px;
+}
+
+
+/* =========================
+   ITEM
+========================= */
+
+.collaboration-item {
+    height: 140px;
+
+    background: #f3f3f1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+
+    transition: .3s ease;
+}
+
+.collaboration-item:hover {
+    transform: translateY(-4px);
+}
+
+.collaboration-item img {
+    max-width: 100%;
+    max-height: 54px;
+
+    object-fit: contain;
+
+    opacity: .8;
+
+    transition: .3s ease;
+
+    filter: grayscale(100%);
+}
+
+.collaboration-item:hover img {
+    opacity: 1;
+
+    filter: grayscale(0%);
+}
+
+
+/* =========================
+   COLOR VARIATIONS
+========================= */
+
+.light-yellow {
+    background: rgba(253, 221, 0, .12);
+}
+
+.light-olive {
+    background: rgba(89, 98, 21, .08);
+}
+
+.light-navy {
+    background: rgba(18, 50, 130, .06);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 992px) {
+
+    .collaborations-title {
+        font-size: 2.7rem;
+    }
+
+    .collaborations-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 576px) {
+
+    .collaborations-section {
+        padding: 0 0 80px;
+    }
+
+    .collaborations-header {
+        margin-bottom: 34px;
+    }
+
+    .collaborations-title {
+        font-size: 2rem;
+        line-height: 1.12;
+
+        margin-bottom: 20px;
+    }
+
+    .collaborations-text {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    .collaborations-grid {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 14px;
+    }
+
+    .collaboration-item {
+        height: 110px;
+
+        padding: 20px;
+    }
+
+    .collaboration-item img {
+        max-height: 42px;
+    }
+
+}

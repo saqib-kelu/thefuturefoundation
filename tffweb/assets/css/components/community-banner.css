@@ -1,0 +1,241 @@
+/* =========================
+   COMMUNITY SECTION
+========================= */
+
+.community-banner-section {
+    padding: 10px 0 120px;
+}
+
+
+/* =========================
+   WRAPPER
+========================= */
+
+.community-banner-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 620px;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+
+/* =========================
+   LEFT CONTENT
+========================= */
+
+.community-banner-left {
+    max-width: 620px;
+}
+
+.community-eyebrow {
+    display: inline-block;
+
+    margin-bottom: 18px;
+
+    color: var(--secondary);
+
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+
+    text-transform: uppercase;
+}
+
+.community-title {
+    font-family: var(--font-heading);
+
+    font-size: 3.3rem;
+    line-height: 1.08;
+    font-weight: 700;
+
+    color: var(--text);
+
+    margin-bottom: 28px;
+}
+
+.community-text {
+    color: var(--muted);
+
+    font-size: 17px;
+    line-height: 1.9;
+}
+
+
+/* =========================
+   CARDS AREA
+========================= */
+
+.community-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.community-card {
+    position: relative;
+
+    min-height: 320px;
+
+    padding: 34px 28px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    overflow: hidden;
+}
+
+.community-card-number {
+    position: absolute;
+
+    top: 26px;
+    right: 26px;
+
+    font-family: var(--font-heading);
+
+    font-size: 4rem;
+    font-weight: 700;
+
+    opacity: .12;
+}
+
+
+/* =========================
+   CARD COLORS
+========================= */
+
+.navy-card {
+    background: var(--primary);
+}
+
+.navy-card h3,
+.navy-card p,
+.navy-card .community-card-number {
+    color: var(--white);
+}
+
+.yellow-card {
+    background: var(--accent);
+}
+
+.yellow-card h3,
+.yellow-card p,
+.yellow-card .community-card-number {
+    color: #1f2937;
+}
+
+.olive-card {
+    background: var(--secondary);
+}
+
+.olive-card h3,
+.olive-card p,
+.olive-card .community-card-number {
+    color: var(--white);
+}
+
+
+/* =========================
+   TYPOGRAPHY
+========================= */
+
+.community-card h3 {
+    font-family: var(--font-heading);
+
+    font-size: 1.7rem;
+    line-height: 1.2;
+    font-weight: 700;
+
+    margin-bottom: 16px;
+}
+
+.community-card p {
+    font-size: 15px;
+    line-height: 1.8;
+
+    margin: 0;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 992px) {
+
+    .community-banner-wrapper {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+    .community-title {
+        font-size: 2.7rem;
+    }
+
+    .community-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .community-card:last-child {
+        grid-column: span 2;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 576px) {
+
+    .community-banner-section {
+        padding: 0 0 80px;
+    }
+
+    .community-title {
+        font-size: 2rem;
+        line-height: 1.12;
+
+        margin-bottom: 22px;
+    }
+
+    .community-text {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    .community-cards {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+    .community-card:last-child {
+        grid-column: unset;
+    }
+
+    .community-card {
+        min-height: 240px;
+
+        padding: 28px 22px;
+    }
+
+    .community-card-number {
+        font-size: 3rem;
+    }
+
+    .community-card h3 {
+        font-size: 1.4rem;
+    }
+
+}

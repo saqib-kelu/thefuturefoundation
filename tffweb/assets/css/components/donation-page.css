@@ -1,0 +1,273 @@
+/* =========================
+   DONATION HERO
+========================= */
+
+.donation-page-hero {
+    padding: 100px 0 80px;
+}
+
+.donation-page-eyebrow {
+    display: inline-block;
+
+    margin-bottom: 20px;
+
+    color: var(--secondary);
+
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+
+    text-transform: uppercase;
+}
+
+.donation-page-title {
+    max-width: 900px;
+
+    font-family: var(--font-heading);
+
+    font-size: 4.5rem;
+    line-height: 1.02;
+    font-weight: 700;
+
+    color: var(--text);
+
+    margin-bottom: 30px;
+}
+
+.donation-page-text {
+    max-width: 760px;
+
+    color: var(--muted);
+
+    font-size: 18px;
+    line-height: 1.9;
+
+    margin: 0;
+}
+
+
+/* =========================
+   DONATION DETAILS
+========================= */
+
+.donation-details-section {
+    padding-bottom: 120px;
+}
+
+.donation-details-wrapper {
+    display: grid;
+    grid-template-columns: 420px 1fr;
+
+    gap: 60px;
+}
+
+
+/* =========================
+   LEFT
+========================= */
+
+.donation-left {
+    background: var(--primary);
+
+    padding: 50px;
+
+    color: var(--white);
+}
+
+.donation-label {
+    display: inline-block;
+
+    margin-bottom: 22px;
+
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+
+    text-transform: uppercase;
+}
+
+.donation-qr-box {
+    background: var(--white);
+
+    padding: 26px;
+
+    margin-bottom: 24px;
+}
+
+.donation-qr-box img {
+    width: 100%;
+    display: block;
+}
+
+.donation-note {
+    color: rgba(255,255,255,.75);
+
+    font-size: 15px;
+    line-height: 1.8;
+
+    margin: 0;
+}
+
+
+/* =========================
+   RIGHT
+========================= */
+
+.donation-right {
+    background: #f3f3f1;
+
+    padding: 50px;
+}
+
+.bank-details-card {
+    display: flex;
+    flex-direction: column;
+
+    gap: 30px;
+}
+
+.bank-detail-item {
+    padding-bottom: 24px;
+
+    border-bottom: 1px solid rgba(0,0,0,.08);
+}
+
+.bank-detail-item:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.bank-detail-item span {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: #6b7280;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    text-transform: uppercase;
+}
+
+.bank-detail-item h4 {
+    font-family: var(--font-heading);
+
+    font-size: 1.6rem;
+    font-weight: 700;
+
+    color: var(--text);
+
+    margin: 0;
+}
+
+
+/* =========================
+   INFO SECTION
+========================= */
+
+.donation-info-section {
+    padding-bottom: 120px;
+}
+
+.donation-info-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 60px;
+
+    align-items: flex-start;
+}
+
+.donation-info-left h2 {
+    font-family: var(--font-heading);
+
+    font-size: 3.2rem;
+    line-height: 1.08;
+    font-weight: 700;
+
+    color: var(--text);
+
+    margin: 0;
+}
+
+.donation-info-right {
+    display: flex;
+    flex-direction: column;
+
+    gap: 26px;
+}
+
+.donation-info-right p {
+    color: var(--muted);
+
+    font-size: 17px;
+    line-height: 1.9;
+
+    margin: 0;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 992px) {
+
+    .donation-page-title {
+        font-size: 3.2rem;
+    }
+
+    .donation-details-wrapper,
+    .donation-info-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 576px) {
+
+    .donation-page-hero {
+        padding: 70px 0 60px;
+    }
+
+    .donation-page-title {
+        font-size: 2.3rem;
+        line-height: 1.1;
+    }
+
+    .donation-page-text {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    .donation-details-section,
+    .donation-info-section {
+        padding-bottom: 80px;
+    }
+
+    .donation-left,
+    .donation-right {
+        padding: 30px 24px;
+    }
+
+    .bank-detail-item h4 {
+        font-size: 1.25rem;
+    }
+
+    .donation-info-left h2 {
+        font-size: 2.1rem;
+        line-height: 1.12;
+    }
+
+    .donation-info-right p {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+}

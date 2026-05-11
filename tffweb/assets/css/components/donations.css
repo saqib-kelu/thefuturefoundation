@@ -1,0 +1,290 @@
+/* =========================
+   DONATIONS
+========================= */
+
+.donations-section {
+    padding: 10px 0 120px;
+}
+
+
+/* =========================
+   WRAPPER
+========================= */
+
+.donations-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 520px;
+
+    gap: 70px;
+
+    background: #f3f3f1;
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   LEFT
+========================= */
+
+.donations-left {
+    padding: 70px;
+}
+
+.donations-eyebrow {
+    display: inline-block;
+
+    margin-bottom: 18px;
+
+    color: var(--secondary);
+
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+
+    text-transform: uppercase;
+}
+
+.donations-title {
+    max-width: 760px;
+
+    font-family: var(--font-heading);
+
+    font-size: 3.2rem;
+    line-height: 1.08;
+    font-weight: 700;
+
+    color: var(--text);
+
+    margin-bottom: 28px;
+}
+
+.donations-highlight {
+    max-width: 700px;
+
+    padding-left: 22px;
+
+    border-left: 4px solid var(--accent);
+
+    color: #374151;
+
+    font-size: 1.08rem;
+    line-height: 1.9;
+    font-weight: 600;
+
+    margin-bottom: 30px;
+}
+
+.donations-text {
+    max-width: 640px;
+
+    color: var(--muted);
+
+    font-size: 17px;
+    line-height: 1.9;
+
+    margin-bottom: 40px;
+}
+
+
+/* =========================
+   ACTIONS
+========================= */
+
+.donations-actions {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.dark-outline {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.dark-outline:hover {
+    background: var(--primary);
+    color: var(--white);
+}
+
+
+/* =========================
+   RIGHT SIDE
+========================= */
+
+.donations-right {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.donation-card {
+    position: relative;
+
+    min-height: 240px;
+
+    padding: 40px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.donation-number {
+    position: absolute;
+
+    top: 24px;
+    right: 24px;
+
+    font-family: var(--font-heading);
+
+    font-size: 3.5rem;
+    font-weight: 700;
+
+    opacity: .12;
+}
+
+
+/* =========================
+   COLORS
+========================= */
+
+.yellow-card {
+    background: var(--accent);
+}
+
+.yellow-card h3,
+.yellow-card p,
+.yellow-card .donation-number {
+    color: #1f2937;
+}
+
+.navy-card {
+    background: var(--primary);
+}
+
+.navy-card h3,
+.navy-card p,
+.navy-card .donation-number {
+    color: var(--white);
+}
+
+.olive-card {
+    background: var(--secondary);
+}
+
+.olive-card h3,
+.olive-card p,
+.olive-card .donation-number {
+    color: var(--white);
+}
+
+
+/* =========================
+   TYPOGRAPHY
+========================= */
+
+.donation-card h3 {
+    font-family: var(--font-heading);
+
+    font-size: 1.7rem;
+    line-height: 1.2;
+    font-weight: 700;
+
+    margin-bottom: 16px;
+}
+
+.donation-card p {
+    font-size: 15px;
+    line-height: 1.8;
+
+    margin: 0;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 992px) {
+
+    .donations-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .donations-title {
+        font-size: 2.7rem;
+    }
+
+    .donations-right {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 576px) {
+
+    .donations-section {
+        padding: 0 0 80px;
+    }
+
+    .donations-left {
+        padding: 34px 24px;
+    }
+
+    .donations-title {
+        font-size: 2rem;
+        line-height: 1.12;
+
+        margin-bottom: 22px;
+    }
+
+    .donations-highlight {
+        padding-left: 16px;
+
+        font-size: 1rem;
+        line-height: 1.8;
+
+        margin-bottom: 24px;
+    }
+
+    .donations-text {
+        font-size: 15px;
+        line-height: 1.8;
+
+        margin-bottom: 28px;
+    }
+
+    .donations-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .donations-right {
+        grid-template-columns: 1fr;
+    }
+
+    .donation-card {
+        min-height: 220px;
+
+        padding: 28px 22px;
+    }
+
+    .donation-number {
+        font-size: 3rem;
+    }
+
+    .donation-card h3 {
+        font-size: 1.4rem;
+    }
+
+}

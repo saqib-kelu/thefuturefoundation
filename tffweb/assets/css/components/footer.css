@@ -1,0 +1,309 @@
+/* =========================
+   FOOTER
+========================= */
+
+.main-footer {
+    background: var(--primary);
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   WRAPPER
+========================= */
+
+.footer-wrapper {
+    padding: 90px 0 34px;
+}
+
+
+/* =========================
+   TOP
+========================= */
+
+.footer-top {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+
+    gap: 80px;
+
+    align-items: center;
+
+    padding-bottom: 70px;
+
+    border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+
+/* =========================
+   BRAND
+========================= */
+
+.footer-logo {
+    width: 160px;
+
+    margin-bottom: 28px;
+}
+
+.footer-description {
+    color: rgba(255,255,255,.72);
+
+    font-size: 15px;
+    line-height: 1.9;
+
+    margin: 0;
+}
+
+
+/* =========================
+   CTA
+========================= */
+
+.footer-eyebrow {
+    display: inline-block;
+
+    margin-bottom: 18px;
+
+    color: var(--accent);
+
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+
+    text-transform: uppercase;
+}
+
+.footer-title {
+    max-width: 820px;
+
+    font-family: var(--font-heading);
+
+    font-size: 4rem;
+    line-height: 1.05;
+    font-weight: 700;
+
+    color: var(--white);
+}
+
+
+/* =========================
+   MIDDLE
+========================= */
+
+.footer-middle {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 60px;
+
+    padding: 70px 0;
+}
+
+
+/* =========================
+   COLUMN
+========================= */
+
+.footer-column-title {
+    display: inline-block;
+
+    margin-bottom: 24px;
+
+    color: var(--accent);
+
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: .8px;
+
+    text-transform: uppercase;
+}
+
+.footer-column ul {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+}
+
+.footer-column ul li {
+    color: rgba(255,255,255,.72);
+
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.footer-column ul li a {
+    color: rgba(255,255,255,.72);
+
+    transition: .3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: var(--white);
+}
+
+
+/* =========================
+   CONTACT LIST
+========================= */
+
+.footer-contact-list li {
+    max-width: 260px;
+}
+
+
+/* =========================
+   BOTTOM
+========================= */
+
+.footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    padding-top: 34px;
+
+    border-top: 1px solid rgba(255,255,255,.08);
+}
+
+.footer-bottom-left {
+    display: flex;
+    flex-direction: column;
+
+    gap: 6px;
+}
+
+.footer-bottom p {
+    color: rgba(255,255,255,.6);
+
+    font-size: 14px;
+
+    margin: 0;
+}
+
+.developer-credit {
+    color: rgba(255,255,255,.55);
+
+    font-size: 13px;
+    line-height: 1.7;
+
+    margin: 0;
+}
+
+.developer-credit a {
+    color: var(--white);
+
+    font-weight: 600;
+
+    transition: .3s ease;
+}
+
+.developer-credit a:hover {
+    color: var(--accent);
+}
+
+.footer-bottom-links {
+    display: flex;
+    align-items: center;
+
+    gap: 24px;
+}
+
+.footer-bottom-links a {
+    color: rgba(255,255,255,.65);
+
+    font-size: 14px;
+
+    transition: .3s ease;
+}
+
+.footer-bottom-links a:hover {
+    color: var(--white);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 992px) {
+
+    .footer-top {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+    .footer-title {
+        font-size: 3rem;
+    }
+
+    .footer-middle {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 576px) {
+
+    .footer-wrapper {
+        padding: 60px 0 28px;
+    }
+
+    .footer-top {
+        gap: 34px;
+
+        padding-bottom: 44px;
+    }
+
+    .footer-logo {
+        width: 120px;
+
+        margin-bottom: 20px;
+    }
+
+    .footer-description {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    .footer-title {
+        font-size: 2.2rem;
+        line-height: 1.1;
+    }
+
+    .footer-middle {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+
+        padding: 44px 0;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 14px;
+    }
+
+    .footer-bottom-links {
+        gap: 18px;
+
+        flex-wrap: wrap;
+    }
+
+}

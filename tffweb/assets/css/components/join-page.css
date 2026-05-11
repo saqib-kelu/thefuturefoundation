@@ -1,0 +1,404 @@
+/* =========================
+   HERO
+========================= */
+
+.join-page-hero {
+    padding: 100px 0 80px;
+}
+
+.join-page-eyebrow {
+    display: inline-block;
+
+    margin-bottom: 20px;
+
+    color: var(--secondary);
+
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+
+    text-transform: uppercase;
+}
+
+.join-page-title {
+    max-width: 920px;
+
+    font-family: var(--font-heading);
+
+    font-size: 4.5rem;
+    line-height: 1.02;
+    font-weight: 700;
+
+    color: var(--text);
+
+    margin-bottom: 30px;
+}
+
+.join-page-text {
+    max-width: 760px;
+
+    color: var(--muted);
+
+    font-size: 18px;
+    line-height: 1.9;
+
+    margin: 0;
+}
+
+
+/* =========================
+   JOIN OPTIONS
+========================= */
+
+.join-options-section {
+    padding-bottom: 120px;
+}
+
+.join-options-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 40px;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.join-option-card {
+    background: #f3f3f1;
+
+    padding: 55px;
+}
+
+.secondary-card {
+    background: var(--primary);
+
+    color: var(--white);
+}
+
+.join-option-icon {
+    width: 92px;
+    height: 92px;
+
+    background: var(--accent);
+
+    border-radius: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 2.3rem;
+
+    margin-bottom: 34px;
+}
+
+.secondary-card .join-option-icon {
+    background: rgba(255,255,255,.12);
+}
+
+.join-option-label {
+    display: inline-block;
+
+    margin-bottom: 18px;
+
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+
+    text-transform: uppercase;
+}
+
+.join-option-card h2 {
+    font-family: var(--font-heading);
+
+    font-size: 2.6rem;
+    line-height: 1.08;
+    font-weight: 700;
+
+    margin-bottom: 26px;
+}
+
+.join-option-card p {
+    font-size: 16px;
+    line-height: 1.9;
+
+    margin-bottom: 34px;
+}
+
+.join-option-list {
+    padding: 0;
+    margin: 0 0 40px;
+
+    list-style: none;
+}
+
+.join-option-list li {
+    position: relative;
+
+    padding-left: 24px;
+
+    font-size: 15px;
+    line-height: 1.9;
+
+    margin-bottom: 16px;
+}
+
+.join-option-list li::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 11px;
+
+    width: 8px;
+    height: 8px;
+
+    background: var(--accent);
+}
+
+
+/* =========================
+   WHATSAPP BUTTON
+========================= */
+
+.partner-whatsapp-btn {
+    height: 56px;
+
+    padding: 0 30px;
+
+    background: #25D366;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    color: var(--white);
+
+    font-size: 15px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition: .3s ease;
+}
+
+.partner-whatsapp-btn svg {
+    width: 22px;
+    height: 22px;
+
+    flex-shrink: 0;
+}
+
+.partner-whatsapp-btn:hover {
+    background: #1da851;
+
+    color: var(--white);
+}
+
+
+/* =========================
+   CONTACT SECTION
+========================= */
+
+.join-contact-section {
+    padding-bottom: 120px;
+}
+
+.join-contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 520px;
+
+    gap: 60px;
+
+    background: #f3f3f1;
+
+    padding: 70px;
+}
+
+.join-contact-label {
+    display: inline-block;
+
+    margin-bottom: 18px;
+
+    color: var(--secondary);
+
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+
+    text-transform: uppercase;
+}
+
+.join-contact-left h2 {
+    max-width: 640px;
+
+    font-family: var(--font-heading);
+
+    font-size: 3.5rem;
+    line-height: 1.05;
+    font-weight: 700;
+
+    color: var(--text);
+
+    margin-bottom: 28px;
+}
+
+.join-contact-left p {
+    max-width: 620px;
+
+    color: var(--muted);
+
+    font-size: 17px;
+    line-height: 1.9;
+
+    margin: 0;
+}
+
+
+/* =========================
+   RIGHT
+========================= */
+
+.join-contact-right {
+    display: flex;
+    flex-direction: column;
+
+    gap: 34px;
+}
+
+.join-contact-item {
+    padding-bottom: 26px;
+
+    border-bottom: 1px solid rgba(0,0,0,.08);
+}
+
+.join-contact-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.join-contact-item span {
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: #6b7280;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+}
+
+.join-contact-item h4 {
+    font-family: var(--font-heading);
+
+    font-size: 1.45rem;
+    line-height: 1.5;
+    font-weight: 700;
+
+    color: var(--text);
+
+    margin: 0;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 992px) {
+
+    .join-page-title {
+        font-size: 3.2rem;
+    }
+
+    .join-options-grid,
+    .join-contact-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 576px) {
+
+    .join-page-hero {
+        padding: 70px 0 60px;
+    }
+
+    .join-page-title {
+        font-size: 2.3rem;
+        line-height: 1.1;
+    }
+
+    .join-page-text {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    .join-options-section,
+    .join-contact-section {
+        padding-bottom: 80px;
+    }
+
+    .join-option-card {
+        padding: 34px 24px;
+    }
+
+    .join-option-icon {
+        width: 72px;
+        height: 72px;
+
+        border-radius: 16px;
+
+        font-size: 1.9rem;
+
+        margin-bottom: 24px;
+    }
+
+    .join-option-card h2 {
+        font-size: 2rem;
+        line-height: 1.12;
+    }
+
+    .join-option-card p,
+    .join-option-list li {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    .partner-whatsapp-btn {
+        width: 100%;
+    }
+
+    .join-contact-wrapper {
+        padding: 34px 24px;
+    }
+
+    .join-contact-left h2 {
+        font-size: 2.2rem;
+        line-height: 1.1;
+    }
+
+    .join-contact-left p {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    .join-contact-item h4 {
+        font-size: 1.15rem;
+        line-height: 1.6;
+    }
+
+}
