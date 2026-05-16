@@ -31,6 +31,7 @@
 
 .initiative-image-wrapper {
     position: relative;
+    object-fit:none;
 }
 
 .initiative-accent-box {
