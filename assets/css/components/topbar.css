@@ -3,13 +3,33 @@
 ========================= */
 
 .topbar {
+
+    width: 100%;
+
+    height: 42px;
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    z-index: 10000;
+
     background: var(--primary);
 
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-
-    padding: 12px 0;
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.08);
 
     overflow: hidden;
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.topbar .container {
+    height: 100%;
 }
 
 
@@ -18,6 +38,9 @@
 ========================= */
 
 .topbar-inner {
+
+    height: 100%;
+
     display: flex;
 
     align-items: center;
@@ -33,18 +56,21 @@
 
 .topbar-left,
 .topbar-right {
+
     display: flex;
 
     align-items: center;
 }
 
 .topbar-left {
+
     gap: 22px;
 
     flex-wrap: wrap;
 }
 
 .topbar-right {
+
     justify-content: flex-end;
 
     flex-shrink: 0;
@@ -56,6 +82,7 @@
 ========================= */
 
 .topbar-item {
+
     display: flex;
 
     align-items: center;
@@ -64,6 +91,7 @@
 }
 
 .topbar-text {
+
     display: flex;
 
     flex-direction: column;
@@ -75,6 +103,7 @@
 ========================= */
 
 .topbar-dot {
+
     width: 8px;
     height: 8px;
 
@@ -91,6 +120,7 @@
 ========================= */
 
 .topbar-label {
+
     color: rgba(255, 255, 255, 0.55);
 
     font-size: 12px;
@@ -99,10 +129,13 @@
     text-transform: uppercase;
 
     letter-spacing: .5px;
+
+    line-height: 1;
 }
 
 .topbar-main-text,
 .topbar-link {
+
     font-size: 13px;
     font-weight: 500;
 
@@ -114,9 +147,12 @@
 }
 
 .topbar-link {
+
     transition: .3s ease;
 
     white-space: nowrap;
+
+    text-decoration: none;
 }
 
 .topbar-link:hover {
@@ -131,10 +167,18 @@
 @media (max-width: 992px) {
 
     .topbar {
+
+        height: auto;
+
         padding: 10px 0;
     }
 
+    .topbar .container {
+        height: auto;
+    }
+
     .topbar-inner {
+
         flex-direction: column;
 
         align-items: center;
@@ -144,6 +188,7 @@
     }
 
     .topbar-left {
+
         width: 100%;
 
         flex-direction: column;
@@ -154,6 +199,7 @@
     }
 
     .topbar-item {
+
         width: 100%;
 
         justify-content: center;
@@ -169,6 +215,7 @@
     }
 
     .topbar-dot {
+
         width: 6px;
         height: 6px;
     }
@@ -178,12 +225,13 @@
     }
 
     .topbar-main-text {
+
         font-size: 12px;
 
         line-height: 1.45;
     }
 
-    /* HIDE EMAIL ON TABLET & MOBILE */
+    /* HIDE EMAIL */
     .topbar-right {
         display: none;
     }
@@ -218,6 +266,7 @@
     }
 
     .topbar-main-text {
+
         font-size: 11px;
 
         line-height: 1.4;

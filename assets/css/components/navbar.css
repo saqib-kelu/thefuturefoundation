@@ -1,26 +1,237 @@
 /* =========================
-   MAIN NAVBAR
+   ROOT VARIABLES
 ========================= */
 
-.main-navbar {
-    background: var(--white);
+:root {
 
-    border-bottom: 1px solid var(--border);
+    --topbar-height: 42px;
+    --navbar-height: 110px;
 
-    min-height: 110px;
-
-    position: sticky;
-    top: 0;
-
-    z-index: 999;
 }
 
 
 /* =========================
-   CONTAINER
+   BODY OFFSET
+========================= */
+
+body {
+
+    padding-top:
+        calc(
+            var(--topbar-height)
+            + var(--navbar-height)
+        );
+
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   TOPBAR
+========================= */
+
+.topbar {
+
+    width: 100%;
+
+    height: var(--topbar-height);
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    z-index: 10000;
+
+    background: var(--primary);
+
+    border-bottom:
+        1px solid rgba(255,255,255,.08);
+}
+
+
+/* =========================
+   TOPBAR CONTAINER
+========================= */
+
+.topbar .container {
+    height: 100%;
+}
+
+
+/* =========================
+   TOPBAR INNER
+========================= */
+
+.topbar-inner {
+
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 24px;
+}
+
+
+/* =========================
+   TOPBAR LEFT / RIGHT
+========================= */
+
+.topbar-left,
+.topbar-right {
+
+    display: flex;
+
+    align-items: center;
+}
+
+.topbar-left {
+
+    gap: 22px;
+
+    flex-wrap: wrap;
+}
+
+.topbar-right {
+
+    justify-content: flex-end;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================
+   TOPBAR ITEMS
+========================= */
+
+.topbar-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.topbar-text {
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+/* =========================
+   DOT
+========================= */
+
+.topbar-dot {
+
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: var(--accent);
+
+    flex-shrink: 0;
+}
+
+
+/* =========================
+   TOPBAR TEXT
+========================= */
+
+.topbar-label {
+
+    color: rgba(255,255,255,.55);
+
+    font-size: 12px;
+    font-weight: 600;
+
+    text-transform: uppercase;
+
+    letter-spacing: .5px;
+
+    line-height: 1;
+}
+
+.topbar-main-text,
+.topbar-link {
+
+    font-size: 13px;
+    font-weight: 500;
+
+    line-height: 1.5;
+
+    letter-spacing: .2px;
+
+    color: rgba(255,255,255,.92);
+}
+
+.topbar-link {
+
+    text-decoration: none;
+
+    transition: .3s ease;
+}
+
+.topbar-link:hover {
+    color: var(--accent);
+}
+
+
+/* =========================
+   MAIN NAVBAR
+========================= */
+
+.main-navbar {
+
+    width: 100%;
+
+    position: fixed;
+
+    top: var(--topbar-height);
+    left: 0;
+
+    z-index: 9999;
+
+    background: rgba(255,255,255,.94);
+
+    backdrop-filter: blur(18px);
+
+    border-bottom:
+        1px solid rgba(0,0,0,.06);
+
+    transition: .3s ease;
+}
+
+
+/* =========================
+   SCROLLED EFFECT
+========================= */
+
+.main-navbar.scrolled {
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,.06);
+
+    border-bottom:
+        1px solid rgba(0,0,0,.04);
+}
+
+
+/* =========================
+   NAVBAR CONTAINER
 ========================= */
 
 .main-navbar .container {
+
+    min-height: var(--navbar-height);
+
     display: flex;
     align-items: center;
 
@@ -33,6 +244,7 @@
 ========================= */
 
 .navbar-brand {
+
     margin: 0;
     padding: 0;
 
@@ -40,6 +252,7 @@
 }
 
 .navbar-brand img {
+
     height: 82px;
     width: auto;
 
@@ -52,6 +265,7 @@
 ========================= */
 
 .navbar-collapse {
+
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -67,6 +281,7 @@
 ========================= */
 
 .navbar-nav {
+
     align-items: center;
 
     gap: 28px;
@@ -79,6 +294,7 @@
 }
 
 .nav-link {
+
     position: relative;
 
     padding: 0 !important;
@@ -92,11 +308,12 @@
 
     color: var(--text);
 
-    transition: var(--transition);
+    transition: .3s ease;
 }
 
 .nav-link:hover,
 .nav-link.active {
+
     color: var(--primary);
 }
 
@@ -106,6 +323,7 @@
 ========================= */
 
 .nav-link::after {
+
     content: "";
 
     position: absolute;
@@ -118,20 +336,22 @@
 
     background: var(--accent);
 
-    transition: var(--transition);
+    transition: .3s ease;
 }
 
 .nav-link:hover::after,
 .nav-link.active::after {
+
     width: 100%;
 }
 
 
 /* =========================
-   NAVBAR ACTIONS
+   ACTIONS
 ========================= */
 
 .navbar-actions {
+
     display: flex;
     align-items: center;
 
@@ -146,6 +366,7 @@
 ========================= */
 
 .navbar-join-btn {
+
     height: 48px;
 
     padding: 0 24px;
@@ -165,10 +386,13 @@
 
     white-space: nowrap;
 
+    text-decoration: none;
+
     transition: .3s ease;
 }
 
 .navbar-join-btn:hover {
+
     background: #0d2563;
 
     border-color: #0d2563;
@@ -182,6 +406,7 @@
 ========================= */
 
 .navbar-donate-btn {
+
     height: 48px;
 
     padding: 0 28px;
@@ -197,12 +422,13 @@
     font-size: 14px;
     font-weight: 700;
 
-    white-space: nowrap;
+    text-decoration: none;
 
     transition: .3s ease;
 }
 
 .navbar-donate-btn:hover {
+
     background: #e8cc00;
 
     color: #1f2937;
@@ -214,16 +440,19 @@
 ========================= */
 
 .custom-toggler {
-    width: 52px;
-    height: 52px;
 
-    padding: 0;
+    width: 56px;
+    height: 56px;
 
-    border: none;
+    padding: 0 !important;
 
-    background: rgba(18, 50, 130, .05);
+    border:
+        1px solid rgba(18,50,130,.08) !important;
 
-    border-radius: 14px;
+    background:
+        var(--white) !important;
+
+    border-radius: 18px;
 
     display: flex;
     align-items: center;
@@ -231,13 +460,20 @@
 
     position: relative;
 
-    box-shadow: none !important;
+    box-shadow:
+        0 10px 25px rgba(18,50,130,.08);
 
     transition: .3s ease;
+
+    outline: none !important;
 }
 
 .custom-toggler:hover {
-    background: rgba(18, 50, 130, .1);
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 14px 30px rgba(18,50,130,.12);
 }
 
 
@@ -246,10 +482,11 @@
 ========================= */
 
 .toggler-line {
+
     position: absolute;
 
-    width: 22px;
-    height: 2px;
+    width: 24px;
+    height: 2.5px;
 
     background: var(--primary);
 
@@ -258,26 +495,13 @@
     transition: .35s ease;
 }
 
-
-/* TOP */
 .top-line {
-    transform: translateY(-7px);
+    transform: translateY(-8px);
 }
 
-/* MIDDLE */
-.middle-line {
-    opacity: 1;
-}
-
-/* BOTTOM */
 .bottom-line {
-    transform: translateY(7px);
+    transform: translateY(8px);
 }
-
-
-/* =========================
-   ACTIVE STATE
-========================= */
 
 .custom-toggler[aria-expanded="true"] .top-line {
     transform: rotate(45deg);
@@ -293,37 +517,68 @@
 
 
 /* =========================
-   LARGE DESKTOP
-========================= */
-
-@media (max-width: 1200px) {
-
-    .navbar-collapse {
-        margin-left: 30px;
-    }
-
-    .navbar-nav {
-        gap: 20px;
-    }
-
-    .nav-link {
-        font-size: 15px;
-    }
-
-}
-
-
-/* =========================
    TABLET
 ========================= */
 
 @media (max-width: 992px) {
 
-    .main-navbar {
-        min-height: 92px;
+    :root {
+        --navbar-height: 92px;
+    }
+
+    .topbar {
+
+        height: auto;
+
+        padding: 10px 0;
+    }
+
+    .topbar .container {
+        height: auto;
+    }
+
+    .topbar-inner {
+
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
+
+        gap: 8px;
+    }
+
+    .topbar-left {
+
+        width: 100%;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 6px;
+    }
+
+    .topbar-item {
+
+        width: 100%;
+
+        justify-content: center;
+
+        text-align: center;
+    }
+
+    .topbar-text {
+        align-items: center;
+    }
+
+    .topbar-right {
+        display: none;
     }
 
     .main-navbar .container {
+
+        min-height: var(--navbar-height);
+
         gap: 20px;
     }
 
@@ -332,21 +587,23 @@
     }
 
     .navbar-collapse {
+
         width: 100%;
 
         flex-direction: column;
         align-items: flex-start;
-        justify-content: flex-start;
 
         margin-left: 0;
 
         margin-top: 24px;
         padding-top: 24px;
 
-        border-top: 1px solid var(--border);
+        border-top:
+            1px solid var(--border);
     }
 
     .navbar-nav {
+
         width: 100%;
 
         align-items: flex-start;
@@ -356,19 +613,15 @@
         margin: 0;
     }
 
-    .nav-link {
-        font-size: 16px;
-    }
-
     .nav-link::after {
         display: none;
     }
 
     .navbar-actions {
+
         width: 100%;
 
         flex-direction: column;
-        align-items: stretch;
 
         gap: 12px;
 
@@ -389,17 +642,28 @@
 
 @media (max-width: 576px) {
 
-    .main-navbar {
-        min-height: 82px;
+    :root {
+        --navbar-height: 82px;
+    }
+
+    .topbar {
+        padding: 8px 0;
+    }
+
+    .topbar-label {
+        font-size: 10px;
+    }
+
+    .topbar-main-text {
+        font-size: 11px;
+    }
+
+    .main-navbar .container {
+        min-height: var(--navbar-height);
     }
 
     .navbar-brand img {
         height: 54px;
-    }
-
-    .navbar-collapse {
-        margin-top: 20px;
-        padding-top: 20px;
     }
 
     .navbar-nav {
@@ -410,39 +674,61 @@
         font-size: 15px;
     }
 
-    .navbar-actions {
-        margin-top: 24px;
-    }
-
     .navbar-join-btn,
     .navbar-donate-btn {
+
         height: 46px;
 
         font-size: 13px;
     }
 
     .custom-toggler {
-        width: 46px;
-        height: 46px;
 
-        border-radius: 12px;
-    }
+        width: 50px;
+        height: 50px;
 
-    .toggler-line {
-        width: 20px;
+        border-radius: 16px;
     }
 
 }
 
-
 /* =========================
-   DESKTOP TOGGLER HIDE
+   HEADER TRANSITIONS
 ========================= */
 
-@media (min-width: 993px) {
+.topbar,
+.main-navbar {
 
-    .custom-toggler {
-        display: none;
-    }
+    transition:
+        transform .45s cubic-bezier(.4,0,.2,1),
+        background .3s ease,
+        box-shadow .3s ease;
+}
 
+
+/* =========================
+   HIDDEN TOPBAR
+========================= */
+
+.topbar.hide-header {
+
+    transform: translateY(-100%);
+}
+
+
+/* =========================
+   HIDDEN NAVBAR
+========================= */
+
+.main-navbar.hide-header {
+
+    transform:
+        translateY(
+            calc(
+                -1 * (
+                    var(--topbar-height)
+                    + var(--navbar-height)
+                )
+            )
+        );
 }

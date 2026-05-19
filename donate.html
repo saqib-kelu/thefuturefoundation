@@ -3,7 +3,10 @@
 
 <head>
 
-    <!-- META -->
+    <!-- =========================
+         META
+    ========================== -->
+
     <meta charset="UTF-8" />
 
     <meta
@@ -11,17 +14,126 @@
         content="width=device-width, initial-scale=1.0"
     />
 
+
+    <!-- =========================
+         PRIMARY SEO
+    ========================== -->
+
     <title>
-        Support The Future Foundation
+        Donate | The Future Foundation | Support Education & Youth Development
     </title>
 
-    <!-- BOOTSTRAP -->
+    <meta
+        name="description"
+        content="Support The Future Foundation, a NGO in Bhaderwah and Doda working in education, youth empowerment, STEM awareness, sports initiatives, sustainability and community development programs."
+    />
+
+    <meta
+        name="keywords"
+        content="donate NGO Bhaderwah, donate NGO Doda, support education Jammu, NGO donation Jammu Kashmir, youth development NGO donation, STEM education support, sports initiatives Doda, community development Bhaderwah"
+    />
+
+    <meta
+        name="author"
+        content="The Future Foundation"
+    />
+
+    <meta
+        name="robots"
+        content="index, follow"
+    />
+
+    <meta
+        name="theme-color"
+        content="#123282"
+    />
+
+    <link
+        rel="canonical"
+        href="https://www.futurefoundationjk.org/donate.html"
+    />
+
+
+    <!-- =========================
+         OPEN GRAPH
+    ========================== -->
+
+    <meta
+        property="og:title"
+        content="Support The Future Foundation"
+    />
+
+    <meta
+        property="og:description"
+        content="Support educational, youth and community development initiatives in Bhaderwah, Doda and Jammu & Kashmir."
+    />
+
+    <meta
+        property="og:image"
+        content="https://www.futurefoundationjk.org/assets/images/og-image.jpg"
+    />
+
+    <meta
+        property="og:url"
+        content="https://www.futurefoundationjk.org/donate.html"
+    />
+
+    <meta
+        property="og:type"
+        content="website"
+    />
+
+
+    <!-- =========================
+         TWITTER
+    ========================== -->
+
+    <meta
+        name="twitter:card"
+        content="summary_large_image"
+    />
+
+    <meta
+        name="twitter:title"
+        content="Support The Future Foundation"
+    />
+
+    <meta
+        name="twitter:description"
+        content="Donate to support education, sports, youth and awareness initiatives in Bhaderwah and Doda."
+    />
+
+    <meta
+        name="twitter:image"
+        content="https://www.futurefoundationjk.org/assets/images/og-image.jpg"
+    />
+
+
+    <!-- =========================
+         FAVICON
+    ========================== -->
+
+    <link
+        rel="icon"
+        type="image/svg+xml"
+        href="assets/images/fficon.svg"
+    />
+
+
+    <!-- =========================
+         BOOTSTRAP
+    ========================== -->
+
     <link
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
         rel="stylesheet"
     />
 
-    <!-- GOOGLE FONTS -->
+
+    <!-- =========================
+         GOOGLE FONTS
+    ========================== -->
+
     <link
         rel="preconnect"
         href="https://fonts.googleapis.com"
@@ -38,31 +150,30 @@
         rel="stylesheet"
     />
 
-    <!-- CSS -->
+
+    <!-- =========================
+         MAIN CSS
+    ========================== -->
+
     <link
         rel="stylesheet"
         href="assets/css/main.css"
     />
-    <!-- FAVICON -->
-<link
-    rel="icon"
-    type="image/svg+xml"
-    href="assets/images/fficon.svg"
-/>
-
-<meta
-    name="theme-color"
-    content="#123282"
-/>
 
 </head>
 
 <body>
+     <!-- TOPBAR -->
+    <div id="topbar-container"></div>
 
     <!-- NAVBAR -->
     <div id="navbar-container"></div>
 
-    <!-- PAGE HERO -->
+
+    <!-- =========================
+         PAGE HERO
+    ========================== -->
+
     <section class="donation-page-hero">
 
         <div class="container custom-container">
@@ -78,14 +189,19 @@
             <p class="donation-page-text">
                 Your contribution supports technology education,
                 awareness campaigns, youth engagement initiatives,
-                sustainability programs and community outreach activities.
+                sustainability programs and community outreach activities
+                across Bhaderwah, Doda and Jammu & Kashmir.
             </p>
 
         </div>
 
     </section>
 
-    <!-- DONATION DETAILS -->
+
+    <!-- =========================
+         DONATION DETAILS
+    ========================== -->
+
     <section class="donation-details-section">
 
         <div class="container custom-container">
@@ -103,14 +219,15 @@
 
                         <img
                             src="assets/images/qr.png"
-                            alt="QR Code"
+                            alt="Donation QR code for The Future Foundation"
                         />
 
                     </div>
 
                     <p class="donation-note">
                         Scan the QR code using any UPI-enabled application
-                        to support The Future Foundation initiatives.
+                        to support educational, youth and community
+                        initiatives by The Future Foundation.
                     </p>
 
                 </div>
@@ -194,7 +311,11 @@
 
     </section>
 
-    <!-- SUPPORT INFO -->
+
+    <!-- =========================
+         SUPPORT INFO
+    ========================== -->
+
     <section class="donation-info-section">
 
         <div class="container custom-container">
@@ -225,7 +346,8 @@
                     <p>
                         Every contribution strengthens our ability to
                         reach more students, communities and individuals
-                        through responsible and future-focused initiatives.
+                        through responsible and future-focused initiatives
+                        in Bhaderwah, Doda and across Jammu & Kashmir.
                     </p>
 
                 </div>
@@ -236,13 +358,46 @@
 
     </section>
 
+
     <!-- FOOTER -->
     <div id="footer-container"></div>
 
-    <!-- BOOTSTRAP -->
+
+    <!-- =========================
+         STRUCTURED DATA SEO
+    ========================== -->
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "DonateAction",
+          "name": "Support The Future Foundation",
+          "target": "https://www.futurefoundationjk.org/donate.html",
+          "recipient": {
+            "@type": "NGO",
+            "name": "The Future Foundation",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Bhaderwah",
+              "addressRegion": "Doda, Jammu & Kashmir",
+              "addressCountry": "India"
+            }
+          }
+        }
+    </script>
+
+
+    <!-- =========================
+         BOOTSTRAP JS
+    ========================== -->
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- MAIN JS -->
+
+    <!-- =========================
+         MAIN JS
+    ========================== -->
+
     <script src="assets/js/main.js"></script>
 
 </body>
